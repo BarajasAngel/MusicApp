@@ -4,6 +4,7 @@ Aplicación que muestra un listado de canciones con la siguiente información: T
 # WireFrame
 
 Para la realización de esta aplicación se creó varios wireframes que tienen como objetivo ser un diseño primitivo en cual basarse a la hora de programar.
+En caso de que las imagene no se muestren correctamente puedes dar click en el siguiente enlace para ver un pdf con todos los mockups. --> [link a los mockups](https://drive.google.com/file/d/1oPp1BJl4PU_M8HDV-jSZUDSHQ181NJYs/view?usp=sharing) <--
 
 ## Inicio
 El inicio contara con una navbar que contara con el logo de la aplicación, un botón para poder seguir agregando canciones y un cuadro de búsqueda para poder encontrar más fácil las canciones.
@@ -42,3 +43,17 @@ A continuacion se mostrara el diseño pre-codigo para tener una guía.
 ![Modal para editar canciones](http://drive.google.com/uc?export=view&id=1w97Fi7YW0lqlim0IatDH-AmVwCot-cgj)
 ### Modal Eliminar
 ![Modal para eliminar canciones](http://drive.google.com/uc?export=view&id=1EEwIrJ5Pho8MON2K97kdVdMWPYsdXVgw)
+
+## Mockups de celular
+A continuacion se mostrara el diseño pre-codigo para tener una guía.
+
+### Inicio
+![Inicio](http://drive.google.com/uc?export=view&id=1GhHE22rXNK0vf5di-UDQqwnkL7AENDU-)
+### Navbar Desplegada
+![Navbar deslpegada en el inicio](http://drive.google.com/uc?export=view&id=1UXGdnMBswNQa18uIT7L9zKcLU-FEa3ZC)
+### Modal Agregar
+![Modal para agregar canciones](http://drive.google.com/uc?export=view&id=177g34GYq5aMvMVCfOfoCTMTMTWDEXeh7)
+### Modal Editar
+![Modal para editar canciones](http://drive.google.com/uc?export=view&id=1OBUMxKqaTv60v3SOPIRd-1Bp_Px-wtTZ)
+### Modal Eliminar
+![Modal para eliminar canciones](http://drive.google.com/uc?export=view&id=1TnBDjCfbU-IViXvjLcMSfBAVeielzM1g)
