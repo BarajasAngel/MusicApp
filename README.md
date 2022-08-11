@@ -29,3 +29,16 @@ En este modal el usuario podrá editar cualquier canción listada que haya sido 
 Por último se mostrara un modal de confirmación en el caso de que el usuario quiera eliminar una canción, este modal es para que el usuario no vaya a eliminar una canción por accidente y sea consciente de sus acciones.
 
 ![Modal para eliminar canciones](http://drive.google.com/uc?export=view&id=1MyMhUByCap85IfMy4GHQad8taKkQiRG7)
+
+# Mockups
+## Mockups de navegador
+A continuacion se mostrara el diseño pre-codigo para tener una guía.
+
+### Inicio
+![Inicio](http://drive.google.com/uc?export=view&id=1n8Kxml3Wd40FtRP84zP42pdtJDQ3iUSR)
+### Modal Agregar
+![Modal para agregar canciones](http://drive.google.com/uc?export=view&id=1NtbUr5mp2NcVqwii8tq5kLRTQMrdmZBh)
+### Modal Editar
+![Modal para editar canciones](http://drive.google.com/uc?export=view&id=1w97Fi7YW0lqlim0IatDH-AmVwCot-cgj)
+### Modal Eliminar
+![Modal para eliminar canciones](http://drive.google.com/uc?export=view&id=1EEwIrJ5Pho8MON2K97kdVdMWPYsdXVgw)
