@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\baraj\\source\\repos\\MusicApp\\MusicApp\\MusicApp\\MusicApp.csproj",
+      "projectUniqueName": "C:\\Users\\baraj\\source\\repos\\MusicApp\\MusicApp\\MusicApp.csproj",
       "projectName": "MusicApp",
-      "projectPath": "C:\\Users\\baraj\\source\\repos\\MusicApp\\MusicApp\\MusicApp\\MusicApp.csproj",
+      "projectPath": "C:\\Users\\baraj\\source\\repos\\MusicApp\\MusicApp\\MusicApp.csproj",
       "packagesPath": "C:\\Users\\baraj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\baraj\\source\\repos\\MusicApp\\MusicApp\\MusicApp\\obj\\",
+      "outputPath": "C:\\Users\\baraj\\source\\repos\\MusicApp\\MusicApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
