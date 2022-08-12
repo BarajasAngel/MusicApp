@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+* {
+    font-family: 'Itim', cursive;
+}
 html {
   font-size: 14px;
 }
-
+.bg-purple {
+    background-color: #42289A;
+}
+.navbar-brand {
+    display:flex;
+}
+.button-add {
+    font-size: 20px;
+}
+.TituloLogo {
+    font-size: 28px;
+}
 @media (min-width: 768px) {
-  html {
+    html {
     font-size: 16px;
   }
 }
