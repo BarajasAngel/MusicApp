@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 * {
     font-family: 'Itim', cursive;
+    
 }
 html {
-  font-size: 14px;
+  font-size: 14px;    
 }
+
 .bg-purple {
     background-color: #42289A;
 }
@@ -12,10 +14,19 @@ html {
     display:flex;
 }
 .button-add {
-    font-size: 20px;
+    font-size: 16px;
 }
 .TituloLogo {
-    font-size: 28px;
+    font-size: 24px;
+}
+.cont {
+    display:flex;
+    flex-direction: column;
+}
+.copy {
+    color: #d0d0d0;
+    justify-self: center;
+    align-self: center;
 }
 @media (min-width: 768px) {
     html {
@@ -29,5 +40,11 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    color: white;
+    background-blend-mode: darken;
+    background-image:  url(../img/defaultopc3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
