@@ -23,7 +23,14 @@ namespace MusicApp.Clases
                 }
                 else
                 {
-                    setCanciones.Link = oCanciones.Link;
+                    if (oCanciones.Link.Contains("http"))
+                    {
+                        setCanciones.Link = oCanciones.Link;
+                    }
+                    else
+                    {
+                        setCanciones.Link = "http://drive.google.com/uc?export=view&id=1v3qORv_ybguLu_bdy_SqtmYJreQ_TxQg";
+                    }
                 }
 
                 setCanciones.Titulo = oCanciones.Titulo;
