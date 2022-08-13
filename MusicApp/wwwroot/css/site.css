@@ -125,7 +125,7 @@ html {
 body {
     color: white;
     background-blend-mode: darken;
-    background-image:  url(../img/fondo3.jpg);
+    background-image:  url(../img/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
