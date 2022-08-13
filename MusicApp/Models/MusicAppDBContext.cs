@@ -22,7 +22,7 @@ namespace MusicApp.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=Asura;Initial Catalog=MusicAppDB;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Server=tcp:musicappcom.database.windows.net,1433;Initial Catalog=MusicAppDB;Persist Security Info=False;User ID=Asura;Password=MusicApp.comAdmin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 

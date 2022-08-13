@@ -15,7 +15,8 @@ namespace MusicApp.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            ViewBag.Bool = false;            
+            
+            ViewBag.Bool = false;
             Mostrar();
             return View();
         }
