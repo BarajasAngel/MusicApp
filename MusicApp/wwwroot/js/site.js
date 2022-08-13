@@ -3,7 +3,6 @@
 
 // Write your JavaScript code.
 
-function submitAgregar() {
-    console.log("Hola");
+function submitAgregar() {    
     frmAgregar.submit();
 }
