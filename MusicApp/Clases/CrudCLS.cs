@@ -43,5 +43,24 @@ namespace MusicApp.Clases
                 return lst;
             }            
         }
+        public string Eliminar(int id) {
+            using (MusicAppDBContext db = new MusicAppDBContext())
+            {
+                var delCancion = db.Canciones.Where(x => x.IdCancion == id).FirstOrDefault();
+                if (delCancion != null)
+                {                    
+                    try
+                    {
+                        db.Remove(delCancion);
+                        db.SaveChanges();                        
+                    }
+                    catch (Exception)
+                    {
+                        return "No se pudo eliminar la canción.";
+                    }
+                }                
+            }
+            return "Canción removida con exito.";
+        }
     }
 }

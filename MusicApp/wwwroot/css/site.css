@@ -6,6 +6,9 @@
 html {
   font-size: 14px;    
 }
+.card {
+    background-color: #297f9a8a;
+}
 .card-body {
     display: flex;
     flex-direction: column;
@@ -26,10 +29,10 @@ html {
     flex-direction: column;
     align-items: center;
 }
-.container-atriburtos {
+.container-atributos {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;    
 }
 .container-buttons {
     display: flex;
@@ -81,7 +84,7 @@ p {
 .container-card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-gap: 30px;
 }
 .container-atributos {
 

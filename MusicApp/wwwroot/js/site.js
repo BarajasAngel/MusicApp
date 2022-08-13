@@ -52,3 +52,11 @@ function submitEditar() {
                     </div>`;
     }
 }
+
+function submitEliminar(id) {
+    document.getElementById("idCancion").value = id;
+}
+
+function confirmar() {
+    frmEliminar.submit();
+}

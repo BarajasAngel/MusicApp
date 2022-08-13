@@ -15,8 +15,8 @@ namespace MusicApp.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            ViewBag.Bool = false;
-            ViewBag.Lista = new CrudCLS().Mostrar();
+            ViewBag.Bool = false;            
+            Mostrar();
             return View();
         }
 
@@ -24,17 +24,32 @@ namespace MusicApp.Controllers
         public IActionResult Agregar (Cancione canciones) {            
             ViewBag.Bool = true;
             ViewBag.Mensaje = new CrudCLS().Agregar(canciones);
-            ViewBag.Lista = new CrudCLS().Mostrar();
+            Mostrar();
             return View("Index");                       
         }
         [HttpPost]
         public IActionResult Editar(Cancione canciones) {
             ViewBag.Bool = true;
+            Mostrar();
             return View("Index");            
         }
         [HttpPost]
-        public IActionResult Eliminar(int id) {
-            return RedirectToAction("Index");
+        public IActionResult Eliminar(int IdCancion) {
+            ViewBag.Bool = true;
+            ViewBag.Mensaje = new CrudCLS().Eliminar(IdCancion);
+            Mostrar();
+            return View("Index");
+        }
+        private void Mostrar() {
+            ViewBag.Lista = new CrudCLS().Mostrar();
+            if (new CrudCLS().Mostrar().Count < 1)
+            {
+                ViewBag.mostrar = true;
+            }
+            else
+            {
+                ViewBag.mostrar = false;
+            }
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
