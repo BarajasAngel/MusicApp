@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MusicApp.Models;
 using System.Diagnostics;
-
+using MusicApp.Clases;
 namespace MusicApp.Controllers
 {
     public class HomeController : Controller
@@ -15,6 +15,7 @@ namespace MusicApp.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            ViewBag.Bool = false;
             return View();
         }
 
@@ -22,9 +23,11 @@ namespace MusicApp.Controllers
         public IActionResult Agregar(Cancione canciones) {
             if (!ModelState.IsValid)
             {
-                return RedirectToAction("Index",canciones);
+                ViewBag.Bool = true;
+                ViewBag.Mensaje = new CrudCLS().Agregar(canciones);
+                return View("Index");
             }
-            return RedirectToAction("Index", canciones);
+            return View("Index");
         }
         [HttpPost]
         public IActionResult Editar(Cancione canciones) {

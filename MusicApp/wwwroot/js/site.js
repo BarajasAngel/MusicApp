@@ -9,8 +9,9 @@ function submitAgregar() {
     var txtAño = document.getElementById("txtAño");
     var txtGenero = document.getElementById("txtGenero");
     if (txtTitulo.value != "" && txtGrupo.value != "" &&
-        txtAño.value != "" && txtGenero.value != "") {        
-        if (txtAño.length == 4) {
+        txtAño.value != "" && txtGenero.value != "") {   
+        
+        if (txtAño.value.length == 4) {
             frmAgregar.submit();
         } else {
             document.getElementById("alert").innerHTML = `
