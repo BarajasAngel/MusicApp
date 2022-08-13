@@ -9,6 +9,14 @@ namespace MusicApp.Clases
             {
                 Cancione setCanciones = new Cancione();
 
+                var comprobar = db.Canciones.Where(x => x.Titulo == oCanciones.Titulo).FirstOrDefault();
+
+
+                if (comprobar != null)
+                {
+                    return "Esta canción ya existe en el listado.";
+                }
+
                 if (oCanciones.Link == null)
                 {
                     setCanciones.Link = "http://drive.google.com/uc?export=view&id=1v3qORv_ybguLu_bdy_SqtmYJreQ_TxQg";
@@ -17,6 +25,7 @@ namespace MusicApp.Clases
                 {
                     setCanciones.Link = oCanciones.Link;
                 }
+
                 setCanciones.Titulo = oCanciones.Titulo;
                 setCanciones.Grupo = oCanciones.Grupo;
                 setCanciones.Año = oCanciones.Año;
