@@ -41,6 +41,18 @@ namespace MusicApp.Controllers
             Mostrar();
             return View("Index");
         }
+        [HttpPost]
+        public IActionResult Buscar(string text) {
+            ViewBag.Bool = false;
+            if (new CrudCLS().Buscar(text).Any())
+            {
+                ViewBag.mostrar = false;
+                ViewBag.Lista = new CrudCLS().Buscar(text);
+                return View("Index");
+            }
+            ViewBag.mostrar = true;
+            return View("Index");
+        }
         private void Mostrar() {
             ViewBag.Lista = new CrudCLS().Mostrar();
             if (new CrudCLS().Mostrar().Count < 1)

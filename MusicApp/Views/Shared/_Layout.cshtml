@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-purple">
             <div class="container-fluid">                
-                <a class="navbar-brand" href="#"> <img class="mt-0 pt-0" src="~/img/Logo.png" alt="logo" width="40" height="40"/><span class="ms-2 TituloLogo">MusicApp.com</span></a>
+                <a class="navbar-brand" href="/"> <img class="mt-0 pt-0" src="~/img/Logo.png" alt="logo" width="40" height="40"/><span class="ms-2 TituloLogo">MusicApp.com</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -25,8 +25,8 @@
                             </a>
                         </li>                                               
                     </ul>   
-                    <form class="d-flex navbar-text button-add" method="post">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <form asp-action="Buscar" asp-controller="Home" method="post" class="d-flex navbar-text button-add">
+                        <input name="text" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                         <button class="btn btn-primary" type="submit">Buscar</button>
                     </form>                    
                 </div>

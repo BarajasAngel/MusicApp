@@ -11,7 +11,7 @@ namespace MusicApp.Clases
 
                 if (oCanciones.Link == null)
                 {
-                    setCanciones.Link = "http://drive.google.com/uc?export=view&id=1ShG0RG7yN7pYCuIzMC8GgE-cIjhul9PO";
+                    setCanciones.Link = "http://drive.google.com/uc?export=view&id=1v3qORv_ybguLu_bdy_SqtmYJreQ_TxQg";
                 }
                 else
                 {
@@ -99,6 +99,18 @@ namespace MusicApp.Clases
                 }                
             }
             return "Canción removida con exito.";
+        }
+        public List<Cancione> Buscar(string text) {
+            using (MusicAppDBContext db = new MusicAppDBContext())
+            {
+                var busqueda = db.Canciones.Where(x => 
+                x.Titulo.ToLower() == text.ToLower() ||
+                x.Grupo.ToLower() == text.ToLower() ||
+                x.Año.ToLower() == text.ToLower() ||
+                x.Genero.ToLower() == text.ToLower()
+                ).ToList();
+                return busqueda;
+            }
         }
     }
 }
