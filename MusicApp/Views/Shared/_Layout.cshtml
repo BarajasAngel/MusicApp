@@ -61,7 +61,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-black">
-                    <form id="frmAgregar">
+                    <div id="alert">   
+
+                    </div>
+                    <form id="frmAgregar" asp-action="Agregar" asp-controller="Home" method="post">
                         <div>
                             <label asp-for="Link"
                                    class="col-form-label col-form-label-lg"></label>
@@ -71,31 +74,31 @@
                         <div>
                             <label asp-for="Titulo"
                                    class="col-form-label col-form-label-lg"></label>
-                            <input asp-for="Titulo" class="form-control form-control-lg" />
+                            <input asp-for="Titulo" class="form-control form-control-lg" id="txtTitulo" />
                             <span asp-validation-for="Titulo" class="text-danger"></span>
                         </div>
                         <div>
                             <label asp-for="Grupo"
                                    class="col-form-label col-form-label-lg"></label>
-                            <input asp-for="Grupo" class="form-control form-control-lg" />
+                            <input asp-for="Grupo" class="form-control form-control-lg" id="txtGrupo"/>
                             <span asp-validation-for="Grupo" class="text-danger"></span>
                         </div>
                         <div>
                             <label asp-for="Año"
                                    class="col-form-label col-form-label-lg"></label>
-                            <input asp-for="Año" class="form-control form-control-lg" />
+                            <input asp-for="Año" class="form-control form-control-lg" id="txtAño"/>
                             <span asp-validation-for="Año" class="text-danger"></span>
                         </div>
                         <div>
                             <label asp-for="Genero"
                                    class="col-form-label col-form-label-lg"></label>
-                            <input asp-for="Genero" class="form-control form-control-lg" />
+                            <input asp-for="Genero" class="form-control form-control-lg" id="txtGenero"/>
                             <span asp-validation-for="Genero" class="text-danger"></span>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     <button type="button" onclick="submitAgregar()" class="btn btn-primary">Agregar</button>
                 </div>
             </div>
