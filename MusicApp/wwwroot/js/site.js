@@ -2,12 +2,23 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-
-function submitAgregar() {    
+function vaciar() {
+    var txtLink = document.getElementById("txtLink");
     var txtTitulo = document.getElementById("txtTitulo");
     var txtGrupo = document.getElementById("txtGrupo");
     var txtAño = document.getElementById("txtAño");
     var txtGenero = document.getElementById("txtGenero");
+    txtLink.value = "";
+    txtTitulo.value = "";
+    txtGrupo.value = "";
+    txtAño.value = "";
+    txtGenero.value = "";
+}
+function submitAgregar() {        
+    var txtTitulo = document.getElementById("txtTitulo");
+    var txtGrupo = document.getElementById("txtGrupo");
+    var txtAño = document.getElementById("txtAño");
+    var txtGenero = document.getElementById("txtGenero");    
     if (txtTitulo.value != "" && txtGrupo.value != "" &&
         txtAño.value != "" && txtGenero.value != "") {   
         
@@ -19,6 +30,7 @@ function submitAgregar() {
                         El año debe tener 4 caracteres.
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>`;
+            
         }
     } else {
         document.getElementById("alert").innerHTML = `
@@ -35,7 +47,7 @@ function submitEditar() {
     var txtGenero = document.getElementById("txtGeneroE");
     if (txtTitulo.value != "" && txtGrupo.value != "" &&
         txtAño.value != "" && txtGenero.value != "") {
-        if (txtAño.length == 4) {
+        if (txtAño.value.length == 4) {
             frmEditar.submit();
         } else {
             document.getElementById("alertE").innerHTML = `
@@ -59,4 +71,15 @@ function submitEliminar(id) {
 
 function confirmar() {
     frmEliminar.submit();
+}
+
+function Editar(idCancion,link, titulo, grupo, año, genero) {
+    document.getElementById("txtIdCancionE").value = idCancion;
+    document.getElementById("txtLinkE").value = link;
+    document.getElementById("txtTituloE").value = titulo;
+    document.getElementById("txtGrupoE").value = grupo;
+    document.getElementById("txtAñoE").value = año;
+    document.getElementById("txtGeneroE").value = genero;
+
+
 }

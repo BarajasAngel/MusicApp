@@ -56,7 +56,7 @@
                                 <span >Género: @lst.Genero</span> 
                             </div>
                             <div class="mt-2 mb-2">
-                                <button class="btn btn-success py-0 pb-1" data-bs-toggle="modal" data-bs-target="#ModalAgregar"><img src="~/img/editar.png" width="16" heigth="16" /></button>
+                                <button onclick="Editar('@lst.IdCancion','@lst.Link','@lst.Titulo','@lst.Grupo','@lst.Año','@lst.Genero')" class="btn btn-success py-0 pb-1" data-bs-toggle="modal" data-bs-target="#ModalAgregar"><img src="~/img/editar.png" width="16" heigth="16" /></button>
                                 <button onclick="submitEliminar(@lst.IdCancion)" class="btn btn-danger  py-0 pb-1" data-bs-toggle="modal" data-bs-target="#ModalEliminar"><img src="~/img/trash.png" width="16" heigth="16" /></button>
                             </div>
                         </div>
@@ -104,10 +104,14 @@
 
                 </div>
                 <form id="frmEditar" asp-action="Editar" asp-controller="Home">
+                    <div>                        
+                        <input type="hidden" asp-for="IdCancion" class="form-control form-control-lg" id="txtIdCancionE" />
+                        <span asp-validation-for="IdCancion" class="text-danger"></span>
+                    </div>
                     <div>
                         <label asp-for="Link"
                                class="col-form-label col-form-label-lg"></label>
-                        <input asp-for="Link" class="form-control form-control-lg" />
+                        <input asp-for="Link" class="form-control form-control-lg" id="txtLinkE" />
                         <span asp-validation-for="Link" class="text-danger"></span>
                     </div>
                     <div>

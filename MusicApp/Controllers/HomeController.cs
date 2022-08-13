@@ -30,6 +30,7 @@ namespace MusicApp.Controllers
         [HttpPost]
         public IActionResult Editar(Cancione canciones) {
             ViewBag.Bool = true;
+            ViewBag.Mensaje = new CrudCLS().Actualizar(canciones);
             Mostrar();
             return View("Index");            
         }

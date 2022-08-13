@@ -43,6 +43,44 @@ namespace MusicApp.Clases
                 return lst;
             }            
         }
+        public string Actualizar(Cancione oCanciones) {
+            using (MusicAppDBContext db = new MusicAppDBContext())
+            {
+                var setCanciones = db.Canciones.Where(x => x.IdCancion == oCanciones.IdCancion).FirstOrDefault();
+                if (setCanciones != null)
+                {
+
+                    if (oCanciones.Link == null)
+                    {
+                        setCanciones.Link = "http://drive.google.com/uc?export=view&id=1ShG0RG7yN7pYCuIzMC8GgE-cIjhul9PO";
+                    }
+                    else
+                    {
+                        setCanciones.Link = oCanciones.Link;
+                    }
+                    setCanciones.Titulo = oCanciones.Titulo;
+                    setCanciones.Grupo = oCanciones.Grupo;
+                    setCanciones.Año = oCanciones.Año;
+                    setCanciones.Genero = oCanciones.Genero;
+
+
+                    try
+                    {
+                        db.Canciones.Update(setCanciones);
+                        db.SaveChanges();
+                        return "Cancion actualizada con exito";
+
+                    }
+                    catch (Exception)
+                    {
+                        return "Hubo un erro al agregar la canción";
+
+                    }
+                }
+                return "Hubo un error al agregar la cancion";
+            }
+
+        }
         public string Eliminar(int id) {
             using (MusicAppDBContext db = new MusicAppDBContext())
             {
