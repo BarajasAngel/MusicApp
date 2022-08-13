@@ -43,17 +43,17 @@
         }
         else
         {
-            @for (int i = 0; i < 6; i++)
+            @foreach(var lst in ViewBag.Lista)
             {
                 <div class=" mt-3">
                     <div class="card border-0" style="width: 18rem;">
-                        <img src="~/img/default.jpg" class="card-img-top" alt="...">
-                        <div class="card-body p-1 ms-3 ">
+                        <img src="@lst.Link" class="card-img-top" style="width:288px; height:192px" alt="...">
+                        <div class="card-body p-1  ">
                             <div class="container-atributos">
-                                <span class="text-black">Titulo:</span><br />
-                                <span class="text-black">Grupo:</span><br />
-                                <span class="text-black">Autor:</span><br />
-                                <span class="text-black">Género:</span><br />
+                                <span class="text-black">Titulo: @lst.Titulo</span><br />
+                                <span class="text-black">Grupo: @lst.Grupo</span><br />
+                                <span class="text-black">Año: @lst.Año</span><br />
+                                <span class="text-black">Género: @lst.Genero</span><br />
                             </div>
                             <div class="mt-2 mb-2">
                                 <a href="#" class="btn btn-success py-0 pb-1" data-bs-toggle="modal" data-bs-target="#ModalAgregar"><img src="~/img/editar.png" width="16" heigth="16" /></a>

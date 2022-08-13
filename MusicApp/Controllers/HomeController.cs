@@ -16,26 +16,21 @@ namespace MusicApp.Controllers
         public IActionResult Index()
         {
             ViewBag.Bool = false;
+            ViewBag.Lista = new CrudCLS().Mostrar();
             return View();
         }
 
         [HttpPost]
-        public IActionResult Agregar(Cancione canciones) {
-            if (!ModelState.IsValid)
-            {
-                ViewBag.Bool = true;
-                ViewBag.Mensaje = new CrudCLS().Agregar(canciones);
-                return View("Index");
-            }
-            return View("Index");
+        public IActionResult Agregar (Cancione canciones) {            
+            ViewBag.Bool = true;
+            ViewBag.Mensaje = new CrudCLS().Agregar(canciones);
+            ViewBag.Lista = new CrudCLS().Mostrar();
+            return View("Index");                       
         }
         [HttpPost]
         public IActionResult Editar(Cancione canciones) {
-            if (!ModelState.IsValid)
-            {
-                return RedirectToAction("Index", canciones);
-            }
-            return RedirectToAction("Index", canciones);
+            ViewBag.Bool = true;
+            return View("Index");            
         }
         [HttpPost]
         public IActionResult Eliminar(int id) {
